@@ -5,12 +5,11 @@ import { Tasks } from '../api/tasks.js';
 // Task component - represents a single todo item
 export default class Task extends Component {
   toggleChecked() {
- Meteor.call('tasks.setChecked', this.props.task._id, !this.props.task.checked);
-  });
+Meteor.call('tasks.setChecked', this.props.task._id, !this.props.task.checked);
 }
 
 deleteThisTask() {
- Meteor.call('tasks.remove', this.props.task._id);
+Meteor.call('tasks.remove', this.props.task._id);
 }
 
   render() {
